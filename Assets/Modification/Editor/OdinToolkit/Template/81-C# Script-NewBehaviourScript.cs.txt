@@ -1,0 +1,77 @@
+/* *********************************
+ * Description : This is an auto-generated code and do not modify it
+ * Author : SZQ
+ * Copyright © 2021 ACT. All rights reserved.
+ * *********************************/
+using Oro;
+using Oro.Sheet;
+using UnityEngine;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using Atp;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+namespace SheetData
+{
+    public partial class #FILE_NAME#Row
+    {
+#FIELDS_CONTENT#
+#PROPERTYS_CONTENT#
+        public #FILE_NAME#Row() { }
+        public #FILE_NAME#Row(#PARAMETER_CONTENT#)
+        {
+#CONSTRUCTOR_CONTENT#
+        }
+    }
+
+    public partial class #FILE_NAME#Sheet : SheetSingleton<#FILE_NAME#Sheet>
+    {
+        const string RES_PATH = "Json/#FILE_NAME#";
+
+        Dictionary<int, #FILE_NAME#Row> _map;
+
+        static readonly #FILE_NAME#Row _empty = new #FILE_NAME#Row();
+        public static #FILE_NAME#Row Empty { get { return _empty; } }
+
+        protected override void InitSingleton()
+        {
+#if UNITY_EDITOR
+            var text = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/Res/" + RES_PATH + ".json").text;
+#else
+            var text = JsonMediator.Jsons["Assets/Res/" + RES_PATH + ".json"];
+#endif
+
+            JArray jArray = JArray.Parse(text);
+            var count = jArray.Count;
+            var rows = new List<#FILE_NAME#Row>(count + 1);
+
+            for (int index = 0; index < count; index++)
+            {
+                var tempJToken = jArray[index];
+                var item = new #FILE_NAME#Row
+                    (
+#Deserialization#
+                    );
+                rows.Add(item);
+            }
+
+            _map = new Dictionary<int, #FILE_NAME#Row>(rows.Count + 1);
+
+            foreach (var row in rows) _map[row.ID] = row;
+        }
+
+        public bool HasRow(int id)
+        {
+            return _map.ContainsKey(id);
+        }
+
+        public #FILE_NAME#Row GetRow(int id)
+        {
+            if (_map.ContainsKey(id)) return _map[id];
+
+            return _empty;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c17af7c604dcc4ab4b2275cd1593e9, type: 3}
+  m_Name: Que
+  m_EditorClassIdentifier: 
+  hurt: 50
+  projectilePrefab: {fileID: 1218724716591446, guid: 5cdcfecb8d4db0b47a6f86a61151a48c,
+    type: 3}
+  spawnPoint: {fileID: 0}
+  spawnParticles: {fileID: 0}
+  shoot: {fileID: 8300000, guid: 60f99d9ab134948a1a32867a6a5ebf8c, type: 3}
+  spawnAudioSource: {fileID: 6913768072455291533, guid: 5cdcfecb8d4db0b47a6f86a61151a48c,
+    type: 3}
+  speed: 0.3

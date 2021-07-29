@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4dda75fa1647c43be995585d4a90b1, type: 3}
+  m_Name: GrenadeFire
+  m_EditorClassIdentifier: 
+  hurt: 500
+  projectilePrefab: {fileID: 125854762765350649, guid: a06c8752c11038348a7d5271e06cd3fb,
+    type: 3}
+  spawnParticles: {fileID: 0}
+  shoot: {fileID: 0}
+  spawnAudioSource: {fileID: 0}
+  InitHighSpeed: 7
+  forwardSpeed: 3
+  coolTime: 0.5

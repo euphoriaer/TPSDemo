@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cbedb80cea7f54d8609c4e3800e38a, type: 3}
+  m_Name: OneKeyAdddressableBuild
+  m_EditorClassIdentifier: 
+  packedAssets: {fileID: 11400000, guid: 79f14a6a20e6263459685208e88478a6, type: 2}
+  addressableItems:
+  - path: Assets/Art/Role
+    groupMode: 0
+    fileTypes: 2
+  - path: Assets/Art/Effects
+    groupMode: 0
+    fileTypes: 2
+  - path: Assets/Res/Slate
+    groupMode: 0
+    fileTypes: 2
+  - path: Assets/Art/UI
+    groupMode: 0
+    fileTypes: 32
+  addressableConfig: {fileID: 11400000, guid: bd66ec44b91cadc4bb2dbed5d482939e, type: 2}

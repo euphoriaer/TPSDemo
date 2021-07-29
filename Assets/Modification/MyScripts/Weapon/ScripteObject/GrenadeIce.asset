@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4dda75fa1647c43be995585d4a90b1, type: 3}
+  m_Name: GrenadeIce
+  m_EditorClassIdentifier: 
+  hurt: 300
+  projectilePrefab: {fileID: 8562598142211750409, guid: dce2f96cd5f1c0341a35d23cfa69da88,
+    type: 3}
+  spawnParticles: {fileID: 0}
+  shoot: {fileID: 0}
+  spawnAudioSource: {fileID: 0}
+  InitHighSpeed: 7
+  forwardSpeed: 3
+  coolTime: 0.5
